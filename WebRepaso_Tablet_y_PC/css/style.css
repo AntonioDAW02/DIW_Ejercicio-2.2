@@ -1,0 +1,490 @@
+/* Estilo de manera externa directamente desde el .css */
+
+
+/* Algunos estilos generales */
+
+#header {
+    margin: 0;
+}
+
+#banner {
+    background-image: url("../img/banner3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 7px 0;
+}
+
+#banner #header {
+    font-size: 25px;
+}
+
+#banner p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+}
+
+img {
+    float: left;
+    margin-right: 5px;
+    width: 7rem;
+}
+
+#tablaMod:active {
+    background-color: rgb(236, 178, 111);
+}
+
+#listaEjercicios:active {
+    background-color: rgb(252, 243, 115);
+}
+
+#iframeMapa:active {
+    background-color: rgb(141, 170, 250);
+}
+
+
+/*Hacer que los controladores desplieguen el menú*/
+
+@media (max-width: 575px) {
+    ul,
+    ol,
+    li {
+        list-style: outside none none;
+    }
+    header,
+    #central-content {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 500px;
+        width: 100%;
+    }
+    .control-menu {
+        background-color: transparent;
+        background-position: center center;
+        border: 1px solid #fff;
+        display: block;
+        float: right;
+        height: 40px;
+        margin-right: 1.3em;
+        width: 40px;
+    }
+    .control-menu a span {
+        display: inline-block;
+        height: 40px;
+        text-indent: -9999px;
+        width: 40px;
+    }
+    .control-menu .close {
+        background-image: url("../img/close-menu.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: none;
+    }
+    .control-menu .open {
+        background-image: url("../img/open-menu.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+    }
+    /*Al hacer clic sobre el enlace que abre el menú éste desaparece*/
+    .close {
+        display: none;
+    }
+    #navigation:target .open {
+        display: none;
+    }
+    /* Al hacer clic sobre el enlace que abre el menú aparece el enlace .close que previamente estaba oculto*/
+    #navigation:target .close {
+        display: block;
+    }
+    ul.nav-items {
+        clear: both;
+        height: 0;
+        overflow: hidden;
+    }
+    #navigation {
+        background-color: rgb(134, 125, 125);
+        padding-top: 15px;
+        padding-bottom: 2px;
+    }
+    #navigation:target ul.nav-items {
+        height: auto;
+    }
+    p img {
+        clear: both;
+    }
+    /*Estilos menu*/
+    ul.nav-items li {
+        display: block;
+    }
+    ul.nav-items a {
+        border-bottom: 2px dotted #dddbdb;
+        color: rgb(255, 255, 255);
+        display: block;
+        height: 3em;
+        line-height: 3em;
+        margin: 0 1.3em;
+        text-decoration: none;
+    }
+    ul.nav-items li:first-child a {
+        border-top: 2px solid transparent;
+    }
+    ul.nav-items li a span {
+        border-left: 3px solid;
+        /* height: 3.2em; */
+        padding: 0.4em 0.5em;
+    }
+    #perfil a span {
+        border-color: #f74307;
+    }
+    #tablaMod a span {
+        border-color: #ff7e33;
+    }
+    #listaEj a span {
+        border-color: #e0c135;
+    }
+    #iframe a span {
+        border-color: #65a4df;
+    }
+    #ftp a span {
+        border-color: rgb(159, 209, 60);
+    }
+    .column {
+        columns: 2;
+    }
+    .column {
+        column-gap: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        column-rule: 2px dashed rgb(81, 167, 196);
+    }
+    #headcolumn {
+        column-span: all;
+    }
+}
+
+
+/* Fin estilo menu */
+
+
+/* Lista de módulos - estilos */
+
+.listM {
+    list-style-type: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilos de tabla */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 1rem;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: rgb(177, 167, 167);
+}
+
+
+/* Fin de estilos de tabla */
+
+
+/* Estilo de las columnas */
+
+
+/* Fin estilo de las columnas */
+
+
+/* Estilo de capas */
+
+.capa img {
+    position: absolute;
+    z-index: -1;
+}
+
+#imgCapa:hover {
+    transform: scale(1.6)
+}
+
+
+/* Fin estilo de capas */
+
+
+/* Estilos de aside - redes sociales */
+
+.social {
+    position: fixed;
+    top: 300px;
+    z-index: 10;
+    right: 0;
+}
+
+.social ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social ul li {
+    margin-bottom: 8px;
+}
+
+.social ul li a {
+    color: #fff;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.icon-facebook {
+    background-color: #3b5998;
+}
+
+.icon-twitter {
+    background-color: #00acee;
+}
+
+.icon-youtube {
+    background-color: #c4302b;
+}
+
+.icon-linkedin {
+    background-color: #0e76a8;
+}
+
+.social ul li a img {
+    width: 25px;
+}
+
+
+/* Fin estilos aside - redes sociales */
+
+
+/* Estilos del footer*/
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(206, 197, 197);
+    text-align: center;
+    margin-top: 5rem;
+    padding: 5px;
+}
+
+
+/* Fin de estilos del footer */
+
+
+/* Estilos para tablet */
+
+.site-nav {
+    width: 100%;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(172, 161, 161);
+}
+
+.site-nav ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    padding: 20px;
+    display: inline-block;
+}
+
+.site-nav ul li:hover {
+    background-color: rgb(87, 78, 78);
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .site-header {
+        display: flex;
+        flex-wrap: wrap;
+        /* position: fixed; */
+    }
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main .iframe {
+        order: 4;
+        margin-right: 5%;
+    }
+    .main .capa {
+        order: 5;
+        margin-left: 6rem;
+    }
+    .iframe,
+    .capa {
+        width: 45%;
+    }
+    .main article table {
+        width: 90%;
+    }
+    .perfil {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        text-align: justify;
+    }
+    .social {
+        display: none;
+    }
+    .listEj {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+    }
+    .col {
+        flex-grow: 3;
+    }
+    .col li {
+        list-style-type: none;
+    }
+    .capa img {
+        margin-top: 7rem;
+    }
+    .columns p {
+        column-count: 3;
+        column-gap: 20px;
+        column-gap: 2rem;
+        column-rule: 5px solid rgb(75, 180, 149);
+        margin: 2rem;
+    }
+}
+
+.but-animation {
+    color: white;
+    padding: 0.75rem;
+    margin: 0.75rem;
+    font-size: 1.25rem;
+    width: auto;
+    background: red;
+    animation: mymove 5s infinite;
+    border-radius: 10px;
+}
+
+@keyframes mymove {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: rgb(255, 230, 0);
+    }
+}
+
+.iframe {
+    transition: width 2s, height 2s, transform 2s;
+    width: 200px;
+    height: 200px;
+}
+
+.iframe:hover {
+    width: 250px;
+    height: 250px;
+    transform: rotate(360deg);
+}
+
+@media (min-width: 993px) {
+    /*Estructura grid general de la página*/
+    .item-header {
+        grid-area: header;
+    }
+    .item-perfil {
+        grid-area: perfil;
+        text-align: justify;
+    }
+    .item-main {
+        grid-area: main;
+    }
+    .item-social {
+        grid-area: social;
+    }
+    .item-footer {
+        grid-area: footer;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-areas: "header header header header" "perfil perfil perfil perfil" "main main main main" "social social social social" "footer footer footer footer";
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    /* .site-header {
+        position: fixed;
+    } */
+    .grid-container-main {
+        display: grid;
+    }
+    /*Estructura grid del section "main"*/
+    .item-table {
+        grid-area: table;
+    }
+    .item-list {
+        grid-area: list;
+    }
+    .item-column {
+        grid-area: column;
+    }
+    .item-iframe {
+        grid-area: iframe;
+    }
+    .item-cap {
+        grid-area: cap;
+    }
+    .grid-container-main {
+        display: grid;
+        grid-template-areas: 'table table list list' 'column column column column' 'iframe iframe cap cap';
+        grid-gap: 20px;
+        padding: 10px;
+    }
+    .columns p {
+        column-count: 4;
+        column-gap: 20px;
+        column-gap: 2rem;
+        column-rule: 5px solid rgb(75, 180, 149);
+        margin: 2rem;
+    }
+    .grid-container-list {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 30px;
+        padding: 10px;
+    }
+    .grid-col-1 {
+        grid-column: 1 / 2;
+    }
+    .col li {
+        list-style-type: none;
+    }
+}
